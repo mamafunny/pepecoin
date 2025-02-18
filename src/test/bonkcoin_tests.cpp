@@ -16,9 +16,11 @@ BOOST_FIXTURE_TEST_SUITE(bonkcoin_tests, TestingSetup)
  */
 uint64_t expectedMaxSubsidy(int height) {
     if (height < 50000) {
-        return 500000 * COIN;
+        return 1000000 * COIN;
     } else if (height < 100000) {
         return 250000 * COIN;
+    } else if (height < 145000) {//BONC TODO Magic number
+        return 125000 * COIN;
     } else if (height < 150000) {
         return 125000 * COIN;
     } else if (height < 200000) {
@@ -40,7 +42,9 @@ uint64_t expectedMinSubsidy(int height) {
     if (height < 50000) {
         return 0;
     } else if (height < 100000) {
-        return 250000 * COIN;
+        return 0 * COIN;
+    } else if (height < 145000) {//BONC TODO Magic number
+        return 0;
     } else if (height < 150000) {
         return 125000 * COIN;
     } else if (height < 200000) {
@@ -60,7 +64,7 @@ BOOST_AUTO_TEST_CASE(subsidy_test)
     const CChainParams& mainParams = Params(CBaseChainParams::MAIN);
     const uint256 prevHash = uint256S("0");
 
-    for (int nHeight = 0; nHeight < 300000; nHeight++) {
+    for (int nHeight = 0; nHeight < 600000; nHeight++) {
         const Consensus::Params& params = mainParams.GetConsensus(nHeight);
         CAmount nSubsidy = GetBonkcoinBlockSubsidy(nHeight, params, prevHash);
         CAmount nExpectedSubsidy = (500000 >> (nHeight / 100000)) * COIN;
@@ -69,10 +73,10 @@ BOOST_AUTO_TEST_CASE(subsidy_test)
     }
 
     // Test reward at 600k+ is constant
-    CAmount nConstantSubsidy = GetBonkcoinBlockSubsidy(300000, mainParams.GetConsensus(300000), prevHash);
+    CAmount nConstantSubsidy = GetBonkcoinBlockSubsidy(600000, mainParams.GetConsensus(600000), prevHash);
     BOOST_CHECK_EQUAL(nConstantSubsidy, 10000 * COIN);
 
-    nConstantSubsidy = GetBonkcoinBlockSubsidy(400000, mainParams.GetConsensus(400000), prevHash);
+    nConstantSubsidy = GetBonkcoinBlockSubsidy(700000, mainParams.GetConsensus(700000), prevHash);
     BOOST_CHECK_EQUAL(nConstantSubsidy, 10000 * COIN);
 }
 
@@ -195,7 +199,7 @@ BOOST_AUTO_TEST_CASE(hardfork_parameters)
     BOOST_CHECK_EQUAL(auxpowParams.fAllowLegacyBlocks, false);
     BOOST_CHECK_EQUAL(auxpowParams.fDigishieldDifficultyCalculation, true);
 
-    const Consensus::Params& auxpowHighParams = Params().GetConsensus(400000); // Arbitrary point after last hard-fork
+    const Consensus::Params& auxpowHighParams = Params().GetConsensus(700000); // Arbitrary point after last hard-fork
     BOOST_CHECK_EQUAL(auxpowHighParams.nPowTargetTimespan, 60);
     BOOST_CHECK_EQUAL(auxpowHighParams.fAllowLegacyBlocks, false);
     BOOST_CHECK_EQUAL(auxpowHighParams.fDigishieldDifficultyCalculation, true);
