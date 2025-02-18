@@ -31,7 +31,7 @@ Bonkcoin ist eine Abspaltung von Dogecoin. Um die Vertrautheit zu wahren, werden
 * Adressen beginnen mit `P` statt `D`
 * BIPS-Funktionen übernommen
 * AuxPow Chain ID 63 (Merged Mining aktiviert)
-* UI im Pepe-Style
+* UI im Bonc-Style
 
 
 
@@ -97,7 +97,7 @@ Oft gibt es [Themen, bei denen Hilfe benötigt wird](https://github.com/bonkcoin
 ## Communities 🐸
 
 Sie können sich der Community in verschiedenen sozialen Medien anschließen, um Leute zu treffen, zu diskutieren, 
-die neuesten Pepe-Memes zu finden, etwas über Bonkcoin zu lernen oder um Ideen zu teilen.
+die neuesten Bonc-Memes zu finden, etwas über Bonkcoin zu lernen oder um Ideen zu teilen.
 
 Hier sind einige Links:
 

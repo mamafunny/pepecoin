@@ -17,7 +17,7 @@ BOOST_FIXTURE_TEST_SUITE(bonkcoin_tests, TestingSetup)
  uint64_t expectedMaxSubsidy(int height) {
     if (height < 100000) {
         return 1000000 * COIN;
-    } else if (height < 145000) {//PEPE TODO Magic number
+    } else if (height < 145000) {//BONC TODO Magic number
         return 500000 * COIN;
     } else if (height < 200000) {
         return 250000 * COIN;
@@ -41,7 +41,7 @@ BOOST_FIXTURE_TEST_SUITE(bonkcoin_tests, TestingSetup)
 uint64_t expectedMinSubsidy(int height) {
     if (height < 100000) {
         return 0;
-    } else if (height < 145000) {//PEPE TODO Magic number
+    } else if (height < 145000) {//BONC TODO Magic number
         return 0;
     } else if (height < 200000) {
         return 250000 * COIN;

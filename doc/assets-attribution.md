@@ -66,4 +66,4 @@ Other
     src/qt/res/src/verify.svg
 
 
-Pepe created by Matt Furie
+Bonc created by Matt Furie
