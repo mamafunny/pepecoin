@@ -100,10 +100,10 @@ BITCOIN_CORE_H = \
   core_io.h \
   core_memusage.h \
   cuckoocache.h \
-  pepecoin.cpp \
-  pepecoin.h \
-  pepecoin-fees.cpp \
-  pepecoin-fees.h \
+  bonkcoin.cpp \
+  bonkcoin.h \
+  bonkcoin-fees.cpp \
+  bonkcoin-fees.h \
   httprpc.h \
   httpserver.h \
   indirectmap.h \

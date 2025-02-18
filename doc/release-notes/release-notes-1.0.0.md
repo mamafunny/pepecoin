@@ -24,7 +24,7 @@
 * Add seed nodes for main and test nets
 * Add DNS Seed nodes to `chainparams.cpp` and dnsseed-policy to point to generic seeder project on github
 * Update Dogecoin address strings to Pepecoin addresses in `uritests.cpp`
-* Change magic numbers in `pow.cpp` and `pepecoin.cpp` to the correct values which reflect the block height digishield min difficulty block activates
+* Change magic numbers in `pow.cpp` and `bonkcoin.cpp` to the correct values which reflect the block height digishield min difficulty block activates
 * Update `checkpointsData` to the genesis blocks
 * Update `nMinimumChainWork`. It was too high. 
 * Set client version to `1.0.0` in `clientversion.h`

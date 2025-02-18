@@ -13,7 +13,7 @@
 #include "consensus/consensus.h"
 #include "consensus/merkle.h"
 #include "consensus/validation.h"
-#include "pepecoin.h"
+#include "bonkcoin.h"
 #include "hash.h"
 #include "validation.h"
 #include "net.h"

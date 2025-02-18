@@ -6,7 +6,7 @@
 #include "chainparams.h"
 #include "coins.h"
 #include "consensus/merkle.h"
-#include "pepecoin.h"
+#include "bonkcoin.h"
 #include "primitives/block.h"
 #include "script/script.h"
 #include "uint256.h"

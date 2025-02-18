@@ -9,7 +9,7 @@
 
 #include "amount.h"
 #include "auxpow.h"
-#include "pepecoin-fees.h"
+#include "bonkcoin-fees.h"
 #include "streams.h"
 #include "tinyformat.h"
 #include "ui_interface.h"

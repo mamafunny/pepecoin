@@ -7,11 +7,11 @@
 
 #include "policy/policy.h"
 #include "arith_uint256.h"
-#include "pepecoin.h"
+#include "bonkcoin.h"
 #include "txmempool.h"
 #include "util.h"
 #include "validation.h"
-#include "pepecoin-fees.h"
+#include "bonkcoin-fees.h"
 #include "amount.h"
 #ifdef ENABLE_WALLET
 #include "wallet/wallet.h"
