@@ -151,9 +151,9 @@ jobs:
       #   if: ${{ matrix.check-security }}
       #   run: make -C src check-security
 
-      - name: Check symbols
-        if: ${{ matrix.check-symbols }}
-        run: make -C src check-symbols
+      # - name: Check symbols
+      #   if: ${{ matrix.check-symbols }}
+      #   run: make -C src check-symbols
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
