@@ -25,8 +25,8 @@ packages:
 - "python3-pip"
 - "rename"
 remotes:
-- "url": "https://github.com/Bonkcoin/Bonkcoin-core.git"
-  "dir": "bonkcoin"
+- "url": "https://github.com/mamafunny/pepecoin.git"
+  "dir": "pepecoin"
 files:
 - "lief-0.12.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
 script: |
