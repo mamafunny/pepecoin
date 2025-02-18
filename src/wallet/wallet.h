@@ -57,19 +57,19 @@ static const CAmount DEFAULT_FALLBACK_FEE = RECOMMENDED_MIN_TX_FEE;
 //! -mintxfee default
 static const CAmount DEFAULT_TRANSACTION_MINFEE = RECOMMENDED_MIN_TX_FEE;
 //! -discardthreshold default
-/* Dogecoin 1.14.5: set the wallet's discard threshold to 1 PEPE because that's what 97%
+/* Dogecoin 1.14.5: set the wallet's discard threshold to 1 BONC because that's what 97%
  *                  of the network currently implements as the hard dust limit. This
  *                  value can be changed when a significant portion of the relay network
  *                  and miners have adopted a different hard dust limit.
  */
-/* Dogecoin 1.14.6: set the wallet's discard threshold to 0.01 PEPE. Very network
+/* Dogecoin 1.14.6: set the wallet's discard threshold to 0.01 BONC. Very network
  *                  adoption of new hard dust limit
  */
 static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100;
 
 //! minimum recommended increment for BIP 125 replacement txs
 /*
- * Pepecoin: Scaled to 1/10th of the recommended transaction fee to make RBF
+ * Bonkcoin: Scaled to 1/10th of the recommended transaction fee to make RBF
  * cheaper than CPFP. This reduces onchain pollution by encouraging transactions
  * to be replaced in the mempool, rather than be respent by another transaction
  * which then both would have to be mined, taking up block space and increasing
@@ -78,7 +78,7 @@ static const CAmount DEFAULT_DISCARD_THRESHOLD = COIN / 100;
  */
 static const CAmount WALLET_INCREMENTAL_RELAY_FEE = RECOMMENDED_MIN_TX_FEE / 10;
 /*
- * Pepecoin: Creating change outputs at exactly the dustlimit is counter-
+ * Bonkcoin: Creating change outputs at exactly the dustlimit is counter-
  * productive because it leaves no space to bump the fee up, so we make the
  * minimum change higher than the discard threshold.
  *
@@ -835,13 +835,13 @@ public:
      */
     static CAmount GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBytes, unsigned int nConfirmTarget, const CTxMemPool& pool, CAmount targetFee);
     /**
-     * Pepecoin: Get a fee targetting a specific transaction speed.
+     * Bonkcoin: Get a fee targetting a specific transaction speed.
      */
-    CAmount GetPepecoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed);
+    CAmount GetBonkcoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed);
     /**
-     * Pepecoin: Get a fee targetting a specific transaction speed.
+     * Bonkcoin: Get a fee targetting a specific transaction speed.
      */
-    static CAmount GetPepecoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed, CAmount targetFee);
+    static CAmount GetBonkcoinPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nSpeed, CAmount targetFee);
     /**
      * Return the minimum required fee taking into account the
      * floating relay fee and user set minimum transaction fee
@@ -849,7 +849,7 @@ public:
     static CAmount GetRequiredFee(const CMutableTransaction& tx, unsigned int nTxBytes);
     /**
      * Return the minimum required fee taking into account the
-     * floating relay fee and user set minimum transaction fee, but not the Pepecoin dust fee.
+     * floating relay fee and user set minimum transaction fee, but not the Bonkcoin dust fee.
      */
     static CAmount GetRequiredFee(unsigned int nTxBytes);
 

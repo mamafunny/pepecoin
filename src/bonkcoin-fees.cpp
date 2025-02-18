@@ -19,12 +19,12 @@
 
 #ifdef ENABLE_WALLET
 
-CFeeRate GetPepecoinFeeRate(int priority)
+CFeeRate GetBonkcoinFeeRate(int priority)
 {
     switch(priority)
     {
     case MAXIMUM:
-        return CFeeRate(COIN / 100 * 521); // 5.21 PEPE, but very carefully avoiding floating point maths
+        return CFeeRate(COIN / 100 * 521); // 5.21 BONC, but very carefully avoiding floating point maths
     case VERY_HIGH:
         return CFeeRate(CWallet::minTxFee.GetFeePerK() * 100);
     case HIGH:
@@ -40,7 +40,7 @@ CFeeRate GetPepecoinFeeRate(int priority)
     return CWallet::minTxFee;
 }
 
-const std::string GetPepecoinPriorityLabel(int priority)
+const std::string GetBonkcoinPriorityLabel(int priority)
 {
     switch(priority)
     {
@@ -64,7 +64,7 @@ const std::string GetPepecoinPriorityLabel(int priority)
 
 #endif
 
-CAmount GetPepecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
+CAmount GetBonkcoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
 {
     {
         LOCK(mempool.cs);
@@ -77,7 +77,7 @@ CAmount GetPepecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool
     }
 
     CAmount nMinFee = ::minRelayTxFeeRate.GetFee(nBytes);
-    nMinFee += GetPepecoinDustFee(tx.vout, nDustLimit);
+    nMinFee += GetBonkcoinDustFee(tx.vout, nDustLimit);
 
     if (fAllowFree)
     {
@@ -94,7 +94,7 @@ CAmount GetPepecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool
     return nMinFee;
 }
 
-CAmount GetPepecoinDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit) {
+CAmount GetBonkcoinDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit) {
     CAmount nFee = 0;
 
     // To limit dust spam, add the dust limit for each output

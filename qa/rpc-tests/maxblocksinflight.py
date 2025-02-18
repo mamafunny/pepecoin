@@ -73,7 +73,7 @@ class TestManager(NodeConnCB):
 class MaxBlocksInFlightTest(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("PEPECOIND", "pepecoind"),
+                          default=os.getenv("BONKCOIND", "bonkcoind"),
                           help="Binary to test max block requests behavior")
 
     def __init__(self):

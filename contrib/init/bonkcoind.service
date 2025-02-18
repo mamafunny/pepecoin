@@ -1,33 +1,33 @@
-# This variant of the unit file is for local installations that are installed with `make install`.
+# This variant of the unit file is for package installations.
 #
 # The relevant paths are:
 #
-#/usr/local/bin/pepecoind
-#/usr/local/etc/pepecoin/
-#/var/local/pepecoin/
+#/usr/bin/bonkcoind
+#/etc/bonkcoin/
+#/var/lib/bonkcoin/
 
 [Unit]
-Description=Pepecoin's distributed currency daemon
+Description=Bonkcoin's distributed currency daemon
 After=network.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/pepecoind -conf=/usr/local/etc/pepecoin/pepecoin.conf -datadir=/var/local/pepecoin
+ExecStart=/usr/bin/bonkcoind -conf=/etc/bonkcoin/bonkcoin.conf -datadir=/var/lib/bonkcoin
 
 KillSignal=SIGINT
 Restart=always
 RestartSec=5
 TimeoutStopSec=60
 TimeoutStartSec=5
-StartLimitIntervalSec=120
-StartLimitBurst=5
 
-User=pepecoin
-Group=pepecoin
+User=bonkcoin
+Group=bonkcoin
 
 ### Restrict resource consumption
 MemoryAccounting=yes
-MemoryLimit=3g
+MemoryLimit=3G
 
 ### Restrict access to host file system.
 #
@@ -40,8 +40,8 @@ TemporaryFileSystem=/:ro
 BindReadOnlyPaths=/etc/ /lib/ /lib64/
 
 # Add daemon paths
-BindReadOnlyPaths=/usr/local/bin/pepecoind /usr/local/etc/pepecoin/
-BindPaths=/var/local/pepecoin/
+BindReadOnlyPaths=/usr/bin/bonkcoind /etc/bonkcoin/
+BindPaths=/var/lib/bonkcoin
 
 ### Restrict access to system.
 

@@ -1,7 +1,7 @@
 <h1 align="center">
-<img src="https://i.imgur.com/DDkfI9i.png" alt="Pepecoin" width="300"/>
+<img src="https://i.imgur.com/DDkfI9i.png" alt="Bonkcoin" width="300"/>
 <br/><br/>
-Pepecoin Core [PEPE, Ᵽ]  
+Bonkcoin Core [BONC, Ᵽ]  
 </h1>
 
 
@@ -9,22 +9,22 @@ Sprache ändern: [EN](./README.md) | [CN](./README_zh_CN.md) | [PT](./README_pt_
 
 
 
-Pepecoin, erstellt von einem der ursprünglichen Dogecoin-Shibes, ist eine Community-fokussierte Kryptowährung, mit dem Ziel, eine neue und spaßige Community, ähnlich der ursprünglichen Dogecoin-Community, zu schaffen.
+Bonkcoin, erstellt von einem der ursprünglichen Dogecoin-Shibes, ist eine Community-fokussierte Kryptowährung, mit dem Ziel, eine neue und spaßige Community, ähnlich der ursprünglichen Dogecoin-Community, zu schaffen.
 
-Im Gegensatz zu allen vorherigen Iterationen ist Pepecoin ein Layer-1 Coin. 
+Im Gegensatz zu allen vorherigen Iterationen ist Bonkcoin ein Layer-1 Coin. 
 Das bedeutet, es gibt keine Liquiditätspools, keine Sperrung von Wallets und keine verwirrenden Smart Contracts. 
-Pepecoin ist eine einfache, eigenständige Blockchain.
+Bonkcoin ist eine einfache, eigenständige Blockchain.
 
-Die Pepecoin Core-Software ermöglicht es jedem, einen Node in den Pepecoin-Blockchain-Netzwerken zu betreiben und verwendet die Scrypt-Hashing-Methode für den "Proof of Work". 
+Die Bonkcoin Core-Software ermöglicht es jedem, einen Node in den Bonkcoin-Blockchain-Netzwerken zu betreiben und verwendet die Scrypt-Hashing-Methode für den "Proof of Work". 
 Sie wurde aus den Programmen Dogecoin Core, Bitcoin Core und anderen Kryptowährungen angepasst.
 
-Für Informationen zu den Standardgebühren im Pepecoin-Netzwerk lesen Sie die [Gebührenempfehlungen](doc/fee-recommendation_DE.md).
+Für Informationen zu den Standardgebühren im Bonkcoin-Netzwerk lesen Sie die [Gebührenempfehlungen](doc/fee-recommendation_DE.md).
 
-**Website:** [pepecoin.org](https://pepecoin.org)
+**Website:** [bonkcoin.org](https://bonkcoin.org)
 
 ## Unterschiede zu Dogecoin
 
-Pepecoin ist eine Abspaltung von Dogecoin. Um die Vertrautheit zu wahren, werden wir versuchen, Pepecoin ähnlich wie Dogecoin zu behandeln.
+Bonkcoin ist eine Abspaltung von Dogecoin. Um die Vertrautheit zu wahren, werden wir versuchen, Bonkcoin ähnlich wie Dogecoin zu behandeln.
 
 Änderungen:
 
@@ -37,14 +37,14 @@ Pepecoin ist eine Abspaltung von Dogecoin. Um die Vertrautheit zu wahren, werden
 
 ## Verwendung 💻
 
-Um Ihre Reise mit Pepecoin Core zu beginnen, lesen Sie den [Quick Guide](doc/README_windows_DE.md), [Installationsanweisungen](INSTALL.md) und das [Einrichtungstutorial](doc/getting-started.md).
+Um Ihre Reise mit Bonkcoin Core zu beginnen, lesen Sie den [Quick Guide](doc/README_windows_DE.md), [Installationsanweisungen](INSTALL.md) und das [Einrichtungstutorial](doc/getting-started.md).
 
-Die JSON-RPC-API von Pepecoin Core ist selbstdokumentierend und kann mit pepecoin-cli help durchsucht werden, während detaillierte Informationen zu jedem Befehl mit pepecoin-cli help <Befehl> angezeigt werden können. 
+Die JSON-RPC-API von Bonkcoin Core ist selbstdokumentierend und kann mit bonkcoin-cli help durchsucht werden, während detaillierte Informationen zu jedem Befehl mit bonkcoin-cli help <Befehl> angezeigt werden können. 
 Alternativ lesen Sie die [Bitcoin Core Dokumentation](https://developer.bitcoin.org/reference/rpc/) - die ein ähnliches Protokoll implementiert - um eine durchsuchbare Version zu erhalten.
 
 ### Ports
 
-Pepecoin Core verwendet standardmäßig den Port `33874` für die Peer-to-Peer-Kommunikation, 
+Bonkcoin Core verwendet standardmäßig den Port `33874` für die Peer-to-Peer-Kommunikation, 
 die zum Synchronisieren der "mainnet"-Blockchain und zum Informieren über neue Transaktionen und Blöcke benötigt wird. 
 Zusätzlich kann ein JSONRPC-Port geöffnet werden, der standardmäßig für Mainnet-Knoten auf Port 33873 eingestellt ist. 
 Es wird dringend empfohlen, RPC-Ports nicht dem öffentlichen Internet preiszugeben.
@@ -56,19 +56,19 @@ Es wird dringend empfohlen, RPC-Ports nicht dem öffentlichen Internet preiszuge
 
 ## Fortlaufende Entwicklung 💻
 
-Pepecoin Core ist eine Open-Source- und Community-getriebene Software. 
+Bonkcoin Core ist eine Open-Source- und Community-getriebene Software. 
 Der Entwicklungsprozess ist offen und öffentlich einsehbar; jeder kann die Software sehen, darüber diskutieren und daran arbeiten.
 
 
 Hauptentwicklungsressourcen:
 
-* [GitHub Projekte](https://github.com/pepecoinppc/pepecoin/projects) werden verwendet,
+* [GitHub Projekte](https://github.com/bonkcoinppc/bonkcoin/projects) werden verwendet,
  um geplante und laufende Arbeiten für bevorstehende Veröffentlichungen zu verfolgen.
 
-* [GitHub Discussion](https://github.com/pepecoinppc/pepecoin/discussions) wird genutzt, 
-  um Features (geplante und ungeplante) zu diskutieren die mit der Entwicklung der Pepecoin Core-Software, den zugrunde liegenden Protokollen und dem PEPE-Vermögenswert zusammenhängen.
+* [GitHub Discussion](https://github.com/bonkcoinppc/bonkcoin/discussions) wird genutzt, 
+  um Features (geplante und ungeplante) zu diskutieren die mit der Entwicklung der Bonkcoin Core-Software, den zugrunde liegenden Protokollen und dem BONC-Vermögenswert zusammenhängen.
 
-* [PepecoinDev subreddit](https://www.reddit.com/r/pepecoindev/)
+* [BonkcoinDev subreddit](https://www.reddit.com/r/bonkcoindev/)
 
 
 ### Versionsstrategie
@@ -89,30 +89,30 @@ Es gibt 3 Arten von Branches in diesem Repository:
 
 ## Mitwirken 🤝
 
-Wenn Sie einen Fehler finden oder Probleme mit dieser Software haben, melden Sie dies bitte über das [Report System](https://github.com/pepecoinppc/pepecoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
+Wenn Sie einen Fehler finden oder Probleme mit dieser Software haben, melden Sie dies bitte über das [Report System](https://github.com/bonkcoinppc/bonkcoin/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5Bbug%5D+).
 
-Bitte sehen Sie sich den [Beitrag zur Mitwirkung](CONTRIBUTING.md) an, um zu erfahren, wie Sie an der Entwicklung von Pepecoin Core teilnehmen können. 
-Oft gibt es [Themen, bei denen Hilfe benötigt wird](https://github.com/pepecoinppc/pepecoin/labels/help%20wanted), bei denen Ihre Beiträge einen großen Einfluss haben und sehr geschätzt werden.
+Bitte sehen Sie sich den [Beitrag zur Mitwirkung](CONTRIBUTING.md) an, um zu erfahren, wie Sie an der Entwicklung von Bonkcoin Core teilnehmen können. 
+Oft gibt es [Themen, bei denen Hilfe benötigt wird](https://github.com/bonkcoinppc/bonkcoin/labels/help%20wanted), bei denen Ihre Beiträge einen großen Einfluss haben und sehr geschätzt werden.
 
 ## Communities 🐸
 
 Sie können sich der Community in verschiedenen sozialen Medien anschließen, um Leute zu treffen, zu diskutieren, 
-die neuesten Pepe-Memes zu finden, etwas über Pepecoin zu lernen oder um Ideen zu teilen.
+die neuesten Pepe-Memes zu finden, etwas über Bonkcoin zu lernen oder um Ideen zu teilen.
 
 Hier sind einige Links:
 
-* [r/Pepecoin Reddit](https://www.reddit.com/r/pepecoin/) Pepecoin Reddit
-* [Discord](https://pepecoin.org/discord) Offizieller Pepecoin Discord Server
-* [Telegram](https://t.me/PepecoinGroup)
-* [Twitter/X](https://twitter.com/PepecoinNetwork)
+* [r/Bonkcoin Reddit](https://www.reddit.com/r/bonkcoin/) Bonkcoin Reddit
+* [Discord](https://bonkcoin.org/discord) Offizieller Bonkcoin Discord Server
+* [Telegram](https://t.me/BonkcoinGroup)
+* [Twitter/X](https://twitter.com/BonkcoinNetwork)
 
 
 ## Häufig gestellte Fragen ❓
 
-Haben Sie eine Frage zu Pepecoin? 
-Eine Antwort befindet sich vielleicht bereits im [FAQ](doc/FAQ_DE.md) oder im [Frage-und-Antwort-Bereich](https://github.com/pepecoinppc/pepecoin/discussions/categories/q-a) des Diskussionsforums!
+Haben Sie eine Frage zu Bonkcoin? 
+Eine Antwort befindet sich vielleicht bereits im [FAQ](doc/FAQ_DE.md) oder im [Frage-und-Antwort-Bereich](https://github.com/bonkcoinppc/bonkcoin/discussions/categories/q-a) des Diskussionsforums!
 
 ## Lizenz ⚖️
-Pepecoin Core wird unter den Bedingungen der MIT-Lizenz veröffentlicht. Siehe 
+Bonkcoin Core wird unter den Bedingungen der MIT-Lizenz veröffentlicht. Siehe 
 [COPYING](COPYING) für weitere Informationen oder besuchen Sie
 [opensource.org](https://opensource.org/licenses/MIT)

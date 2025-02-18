@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>Pepecoin</source>
-        <translation>Pepecoin</translation>
+        <source>Bonkcoin</source>
+        <translation>Bonkcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -760,8 +760,8 @@
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>Pepecoin Core</source>
-        <translation>Pepecoin Core</translation>
+        <source>Bonkcoin Core</source>
+        <translation>Bonkcoin Core</translation>
     </message>
     <message>
         <source>Information</source>

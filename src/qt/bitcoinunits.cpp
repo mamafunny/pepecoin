@@ -45,11 +45,11 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("MPEPE");
-    case kBTC: return QString("kPEPE");
-    case BTC: return QString("PEPE");
-    case mBTC: return QString("mPEPE");
-    case uBTC: return QString::fromUtf8("μPEPE");
+    case MBTC: return QString("MBONC");
+    case kBTC: return QString("kBONC");
+    case BTC: return QString("BONC");
+    case mBTC: return QString("mBONC");
+    case uBTC: return QString::fromUtf8("μBONC");
     default: return QString("???");
     }
 }
@@ -58,11 +58,11 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("Mega-Pepecoins (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case kBTC: return QString("Kilo-Pepecoins (1" THIN_SP_UTF8 "000)");
-    case BTC: return QString("Pepecoins");
-    case mBTC: return QString("Milli-Pepecoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Pepecoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case MBTC: return QString("Mega-Bonkcoins (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case kBTC: return QString("Kilo-Bonkcoins (1" THIN_SP_UTF8 "000)");
+    case BTC: return QString("Bonkcoins");
+    case mBTC: return QString("Milli-Bonkcoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-Bonkcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

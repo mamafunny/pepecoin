@@ -31,8 +31,8 @@ packages:
 - "libtinfo5"
 - "xorriso"
 remotes:
-- "url": "https://github.com/mamafunny/pepecoin.git"
-  "dir": "pepecoin"
+- "url": "https://github.com/mamafunny/bonkcoin.git"
+  "dir": "bonkcoin"
 files:
 - "MacOSX10.11.sdk.tar.gz"
 - "lief-0.12.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"

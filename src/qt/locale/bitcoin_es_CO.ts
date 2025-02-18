@@ -126,8 +126,8 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a Pepecoin address</source>
-        <translation>Enviando monedas a una dirección de Pepecoin</translation>
+        <source>Send coins to a Bonkcoin address</source>
+        <translation>Enviando monedas a una dirección de Bonkcoin</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -146,8 +146,8 @@
         <translation>&amp;Verificar Mensaje...</translation>
     </message>
     <message>
-        <source>Pepecoin</source>
-        <translation>Pepecoin</translation>
+        <source>Bonkcoin</source>
+        <translation>Bonkcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -296,8 +296,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Pepecoin Core</source>
-        <translation>Pepecoin Core</translation>
+        <source>Bonkcoin Core</source>
+        <translation>Bonkcoin Core</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

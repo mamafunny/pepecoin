@@ -67,14 +67,9 @@ BOOST_AUTO_TEST_CASE(subsidy_test)
     for (int nHeight = 0; nHeight < 600000; nHeight++) {
         const Consensus::Params& params = mainParams.GetConsensus(nHeight);
         CAmount nSubsidy = GetBonkcoinBlockSubsidy(nHeight, params, prevHash);
-
-        // Adjusting expected subsidy with proper function calls
-        CAmount nExpectedMaxSubsidy = expectedMaxSubsidy(nHeight);
-        CAmount nExpectedMinSubsidy = expectedMinSubsidy(nHeight);
-        
+        CAmount nExpectedSubsidy = (250000 >> (nHeight / 100000)) * COIN;
         BOOST_CHECK(MoneyRange(nSubsidy));
-        BOOST_CHECK(nSubsidy >= nExpectedMinSubsidy);
-        BOOST_CHECK(nSubsidy <= nExpectedMaxSubsidy);
+        BOOST_CHECK_EQUAL(nSubsidy, nExpectedSubsidy);
     }
 
     // Test reward at 600k+ is constant

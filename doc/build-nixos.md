@@ -5,10 +5,10 @@ of the latest changes on NixOS.
 
 Clone and enter the repo:
 
-    $ git clone https://github.com/pepecoinppc/pepecoin
-    $ cd pepecoin
+    $ git clone https://github.com/bonkcoinppc/bonkcoin
+    $ cd bonkcoin
 
-Enter the `nix-shell` environment with all the Pepecoin dependencies present:
+Enter the `nix-shell` environment with all the Bonkcoin dependencies present:
 
     $ nix-shell ./contrib/nixos/shell.nix
 
@@ -20,4 +20,4 @@ Run the build steps with flags necessary for NixOS:
 
 Start the GUI!
 
-    $ ./src/qt/pepecoin-qt
+    $ ./src/qt/bonkcoin-qt

@@ -3,9 +3,9 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/pepecoinppc/pepecoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/bonkcoinppc/bonkcoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/pepecoinppc/pepecoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/bonkcoinppc/bonkcoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -21,7 +21,7 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/pepecoinppc/pepecoin/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/bonkcoinppc/bonkcoin/pull/7415) for an example.
 * Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 
 ### First time / New builders
@@ -31,12 +31,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/pepecoinppc/gitian.sigs.git
-    git clone https://github.com/pepecoinppc/pepecoin-detached-sigs.git
+    git clone https://github.com/bonkcoinppc/gitian.sigs.git
+    git clone https://github.com/bonkcoinppc/bonkcoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/pepecoinppc/pepecoin.git
+    git clone https://github.com/bonkcoinppc/bonkcoin.git
 
-### Pepecoin maintainers/release engineers, update version in sources
+### Bonkcoin maintainers/release engineers, update version in sources
 
 Update the following:
 
@@ -77,7 +77,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./pepecoin
+    pushd ./bonkcoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -111,7 +111,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../pepecoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../bonkcoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -119,50 +119,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url pepecoin=/path/to/pepecoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url bonkcoin=/path/to/bonkcoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Pepecoin Core for Linux, Windows, and OS X:
+### Build and sign Bonkcoin Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit pepecoin=v${VERSION} ../pepecoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../pepecoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/pepecoin-*.tar.gz build/out/src/pepecoin-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit bonkcoin=v${VERSION} ../bonkcoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../bonkcoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/bonkcoin-*.tar.gz build/out/src/bonkcoin-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit pepecoin=v${VERSION} ../pepecoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../pepecoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/pepecoin-*-win-unsigned.tar.gz inputs/pepecoin-win-unsigned.tar.gz
-    mv build/out/pepecoin-*.zip build/out/pepecoin-*.exe ../
+    ./bin/gbuild --memory 3000 --commit bonkcoin=v${VERSION} ../bonkcoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../bonkcoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/bonkcoin-*-win-unsigned.tar.gz inputs/bonkcoin-win-unsigned.tar.gz
+    mv build/out/bonkcoin-*.zip build/out/bonkcoin-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit pepecoin=v${VERSION} ../pepecoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../pepecoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/pepecoin-*-osx-unsigned.tar.gz inputs/pepecoin-osx-unsigned.tar.gz
-    mv build/out/pepecoin-*.tar.gz build/out/pepecoin-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit bonkcoin=v${VERSION} ../bonkcoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../bonkcoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/bonkcoin-*-osx-unsigned.tar.gz inputs/bonkcoin-osx-unsigned.tar.gz
+    mv build/out/bonkcoin-*.tar.gz build/out/bonkcoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`pepecoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`pepecoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`pepecoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `pepecoin-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`pepecoin-${VERSION}-osx-unsigned.dmg`, `pepecoin-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`bonkcoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`bonkcoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`bonkcoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `bonkcoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`bonkcoin-${VERSION}-osx-unsigned.dmg`, `bonkcoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import pepecoin/contrib/gitian-keys/*.pgp
+    gpg --import bonkcoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../pepecoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../pepecoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../pepecoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../bonkcoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../bonkcoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../bonkcoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -180,25 +180,25 @@ Commit your signature to gitian.sigs:
 Wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [pepecoin-detached-sigs](https://github.com/dogecoin/dogecoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [bonkcoin-detached-sigs](https://github.com/dogecoin/dogecoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../pepecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../pepecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../pepecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/pepecoin-osx-signed.dmg ../pepecoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../bonkcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../bonkcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../bonkcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/bonkcoin-osx-signed.dmg ../bonkcoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../pepecoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../pepecoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../pepecoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/pepecoin-*win64-setup.exe ../pepecoin-${VERSION}-win64-setup.exe
-    mv build/out/pepecoin-*win32-setup.exe ../pepecoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../bonkcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../bonkcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../bonkcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/bonkcoin-*win64-setup.exe ../bonkcoin-${VERSION}-win64-setup.exe
+    mv build/out/bonkcoin-*win32-setup.exe ../bonkcoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -220,23 +220,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-pepecoin-${VERSION}-aarch64-linux-gnu.tar.gz
-pepecoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-pepecoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-pepecoin-${VERSION}-x86_64-linux-gnu.tar.gz
-pepecoin-${VERSION}-osx64.tar.gz
-pepecoin-${VERSION}-osx.dmg
-pepecoin-${VERSION}.tar.gz
-pepecoin-${VERSION}-win32-setup.exe
-pepecoin-${VERSION}-win32.zip
-pepecoin-${VERSION}-win64-setup.exe
-pepecoin-${VERSION}-win64.zip
+bonkcoin-${VERSION}-aarch64-linux-gnu.tar.gz
+bonkcoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+bonkcoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+bonkcoin-${VERSION}-x86_64-linux-gnu.tar.gz
+bonkcoin-${VERSION}-osx64.tar.gz
+bonkcoin-${VERSION}-osx.dmg
+bonkcoin-${VERSION}.tar.gz
+bonkcoin-${VERSION}-win32-setup.exe
+bonkcoin-${VERSION}-win32.zip
+bonkcoin-${VERSION}-win64-setup.exe
+bonkcoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the pepecoin.org server, nor put them in the torrent*.
+space *do not upload these to the bonkcoin.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -246,19 +246,19 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the pepecoin.org Github repo
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the bonkcoin.org Github repo
 
-- Create a [new GitHub release](https://github.com/pepecoinppc/pepecoin/releases/new) with a link to the archived release notes.
+- Create a [new GitHub release](https://github.com/bonkcoinppc/bonkcoin/releases/new) with a link to the archived release notes.
 
-- Update pepecoin.org version - Langerhans to do
+- Update bonkcoin.org version - Langerhans to do
 
 - Announce the release:
 
   - Twitter
 
-  - Update title of #pepecoin on Freenode IRC
+  - Update title of #bonkcoin on Freenode IRC
 
-  - Announce on reddit /r/pepecoin, /r/pepecoindev
+  - Announce on reddit /r/bonkcoin, /r/bonkcoindev
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

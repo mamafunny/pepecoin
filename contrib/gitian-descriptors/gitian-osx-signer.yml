@@ -1,5 +1,5 @@
 ---
-name: "pepecoin-dmg-signer"
+name: "bonkcoin-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/pepecoinppc/pepecoin-detached-sigs.git"
+- "url": "https://github.com/bonkcoinppc/bonkcoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "pepecoin-osx-unsigned.tar.gz"
+- "bonkcoin-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=pepecoin-osx-unsigned.tar.gz
-  SIGNED=pepecoin-osx-signed.dmg
+  UNSIGNED=bonkcoin-osx-unsigned.tar.gz
+  SIGNED=bonkcoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

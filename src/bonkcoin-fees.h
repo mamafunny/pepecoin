@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_PEPECOIN_FEES_H
-#define BITCOIN_PEPECOIN_FEES_H
+#ifndef BITCOIN_BONKCOIN_FEES_H
+#define BITCOIN_BONKCOIN_FEES_H
 
 #include "amount.h"
 #include "chain.h"
@@ -22,10 +22,10 @@ enum FeeRatePreset
 };
 
 /** Estimate fee rate needed to get into the next nBlocks */
-CFeeRate GetPepecoinFeeRate(int priority);
-const std::string GetPepecoinPriorityLabel(int priority);
+CFeeRate GetBonkcoinFeeRate(int priority);
+const std::string GetBonkcoinPriorityLabel(int priority);
 #endif // ENABLE_WALLET
-CAmount GetPepecoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree);
-CAmount GetPepecoinDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit);
+CAmount GetBonkcoinMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree);
+CAmount GetBonkcoinDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit);
 
-#endif // BITCOIN_PEPECOIN_FEES_H
+#endif // BITCOIN_BONKCOIN_FEES_H

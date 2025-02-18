@@ -110,16 +110,16 @@
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>Send coins to a Pepecoin address</source>
-        <translation>Enviar monedas a una dirección Pepecoin</translation>
+        <source>Send coins to a Bonkcoin address</source>
+        <translation>Enviar monedas a una dirección Bonkcoin</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Cambie la clave utilizada para el cifrado del monedero</translation>
     </message>
     <message>
-        <source>Pepecoin</source>
-        <translation>Pepecoin</translation>
+        <source>Bonkcoin</source>
+        <translation>Bonkcoin</translation>
     </message>
     <message>
         <source>Wallet</source>

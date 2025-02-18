@@ -1,4 +1,4 @@
-## Pepecoin Core 1.1.0 Release Notes
+## Bonkcoin Core 1.1.0 Release Notes
 
 This is a new minor release which includes improvements from recent Dogecoin releases. All users are **strongly recommended** to upgrade.
 
@@ -11,8 +11,8 @@ This is a new minor release which includes improvements from recent Dogecoin rel
 
 #### Design Changes
 
-* Update P logo for "About Pepecoin Core" in the help menu
-* Add Chinese translation fix in Pepecoin Core
+* Update P logo for "About Bonkcoin Core" in the help menu
+* Add Chinese translation fix in Bonkcoin Core
 * Add German, Japanese, and French translations for README.md
 
 #### Credits

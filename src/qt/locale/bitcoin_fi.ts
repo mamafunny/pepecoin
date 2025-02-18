@@ -99,11 +99,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>These are your Pepecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Bonkcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>These are your Pepecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Bonkcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -205,7 +205,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PEPECOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BONKCOINS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -217,7 +217,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your pepecoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bonkcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -359,8 +359,8 @@
         <translation>Ladataan lohkoindeksiä...</translation>
     </message>
     <message>
-        <source>Send coins to a Pepecoin address</source>
-        <translation>Lähetä kolikoita Pepecoin-osoitteeseen</translation>
+        <source>Send coins to a Bonkcoin address</source>
+        <translation>Lähetä kolikoita Bonkcoin-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -383,8 +383,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>Pepecoin</source>
-        <translation>Pepecoin</translation>
+        <source>Bonkcoin</source>
+        <translation>Bonkcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -404,19 +404,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Pepecoin-ikkuna</translation>
+        <translation>Näytä tai piilota Bonkcoin-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Pepecoin addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Pepecoin -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Bonkcoin addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Bonkcoin -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Pepecoin addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Pepecoin -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Bonkcoin addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Bonkcoin -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -435,8 +435,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pepecoin: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja pepecoin: URIt)</translation>
+        <source>Request payments (generates QR codes and bonkcoin: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja bonkcoin: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -447,18 +447,18 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a pepecoin: URI or payment request</source>
-        <translation>Avaa pepecoin: URI tai maksupyyntö</translation>
+        <source>Open a bonkcoin: URI or payment request</source>
+        <translation>Avaa bonkcoin: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Pepecoin network</source>
+        <source>%n active connection(s) to Bonkcoin network</source>
         <translation>
-            <numerusform>%n aktiivinen yhteys Pepecoin-verkkoon</numerusform>
-            <numerusform>%n aktiivista yhteyttä Pepecoin-verkkoon</numerusform>
+            <numerusform>%n aktiivinen yhteys Bonkcoin-verkkoon</numerusform>
+            <numerusform>%n aktiivista yhteyttä Bonkcoin-verkkoon</numerusform>
         </translation>
     </message>
     <message>
@@ -505,8 +505,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Pepecoin command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Pepecoinin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible Bonkcoin command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Bonkcoinin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -583,7 +583,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import a Pepecoin private key</source>
+        <source>Import a Bonkcoin private key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -619,7 +619,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A fatal error occurred. Pepecoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Bonkcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -813,7 +813,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid Pepecoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Bonkcoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -985,8 +985,8 @@
         <translation>Tämä on ensimmäinen kerta, kun %1 on käynnistetty, joten voit valita data-hakemiston paikan.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Pepecoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 lataa ja tallentaa kopion Pepecoinin lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
+        <source>%1 will download and store a copy of the Bonkcoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 lataa ja tallentaa kopion Bonkcoinin lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1038,11 +1038,11 @@
         <translation>Piilota</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the pepecoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bonkcoin network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attempting to spend pepecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend bonkcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1192,16 +1192,16 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Pepecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Pepecoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Bonkcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Bonkcoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portin uudelleenohjaus &amp;UPnP:llä</translation>
     </message>
     <message>
-        <source>Connect to the Pepecoin network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Pepecoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the Bonkcoin network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Bonkcoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1240,8 +1240,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Pepecoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Pepecoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the Bonkcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä Bonkcoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1277,11 +1277,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona pepecoin-määrät näytetään</translation>
+        <translation>Yksikkö jona bonkcoin-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti pepecoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti bonkcoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1355,8 +1355,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Pepecoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Pepecoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bonkcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Bonkcoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1396,7 +1396,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Pepecoinien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Bonkcoinien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1463,11 +1463,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To see ongoing development and contribute, check out the Pepecoin Core repository on GitHub</source>
+        <source>To see ongoing development and contribute, check out the Bonkcoin Core repository on GitHub</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Services that claim to double your pepecoins are always ponzi schemes</source>
+        <source>Services that claim to double your bonkcoins are always ponzi schemes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1582,7 +1582,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of PEPE you wish to send to each wallet:</source>
+        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of BONC you wish to send to each wallet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1595,7 +1595,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Lähetä Pepecoineja</translation>
+        <translation type="unfinished">Lähetä Bonkcoineja</translation>
     </message>
     <message>
         <source>The recipient address is not valid, please recheck.</source>
@@ -1653,7 +1653,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot start pepecoin: click-to-pay handler</source>
+        <source>Cannot start bonkcoin: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1669,7 +1669,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Pepecoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Bonkcoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1802,8 +1802,8 @@ p, li { white-space: pre-wrap; }
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Pepecoin address (e.g. %1)</source>
-        <translation>Syötä Pepecoin-osoite (esim. %1)</translation>
+        <source>Enter a Bonkcoin address (e.g. %1)</source>
+        <translation>Syötä Bonkcoin-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2288,8 +2288,8 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Uudelleenkäytä vastaanotto-osoitetta (ei suositella)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Pepecoin network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Pepecoin-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bonkcoin network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Bonkcoin-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2442,7 +2442,7 @@ p, li { white-space: pre-wrap; }
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä Pepecoineja</translation>
+        <translation>Lähetä Bonkcoineja</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2585,7 +2585,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for pepecoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bonkcoin transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2693,7 +2693,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Warning: Invalid Pepecoin address</source>
+        <source>Warning: Invalid Bonkcoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2736,8 +2736,8 @@ p, li { white-space: pre-wrap; }
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Pepecoin address to send the payment to</source>
-        <translation>Pepecoin-osoite johon maksu lähetetään</translation>
+        <source>The Bonkcoin address to send the payment to</source>
+        <translation>Bonkcoin-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2756,8 +2756,8 @@ p, li { white-space: pre-wrap; }
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less pepecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän pepecoineja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bonkcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän bonkcoineja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2780,8 +2780,8 @@ p, li { white-space: pre-wrap; }
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the pepecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Pepecoin network.</source>
-        <translation>Viesti joka liitettiin pepecoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Pepecoin-verkkoon.</translation>
+        <source>A message that was attached to the bonkcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bonkcoin network.</source>
+        <translation>Viesti joka liitettiin bonkcoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Bonkcoin-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2825,8 +2825,8 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>The Pepecoin address to sign the message with</source>
-        <translation>Pepecoin-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Bonkcoin address to sign the message with</source>
+        <translation>Bonkcoin-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2857,8 +2857,8 @@ p, li { white-space: pre-wrap; }
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Pepecoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Pepecoin-osoitteen</translation>
+        <source>Sign the message to prove you own this Bonkcoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Bonkcoin-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2877,12 +2877,12 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <source>The Pepecoin address the message was signed with</source>
-        <translation>Pepecoin-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Bonkcoin address the message was signed with</source>
+        <translation>Bonkcoin-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Pepecoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Pepecoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Bonkcoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Bonkcoin-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2893,7 +2893,7 @@ p, li { white-space: pre-wrap; }
         <translation>Tyhjennä kaikki varmista-viesti-kentät</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive pepecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive bonkcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3469,7 +3469,7 @@ p, li { white-space: pre-wrap; }
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Lähetä Pepecoineja</translation>
+        <translation type="unfinished">Lähetä Bonkcoineja</translation>
     </message>
 </context>
 <context>
@@ -3566,8 +3566,8 @@ p, li { white-space: pre-wrap; }
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>Pepecoin Core</source>
-        <translation>Pepecoin-ydin</translation>
+        <source>Bonkcoin Core</source>
+        <translation>Bonkcoin-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -4110,7 +4110,7 @@ p, li { white-space: pre-wrap; }
         <translation>Virhe</translation>
     </message>
     <message>
-        <source>Bitcoin Core and Pepecoin Core</source>
+        <source>Bitcoin Core and Bonkcoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

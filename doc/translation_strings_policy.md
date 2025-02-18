@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the Pepecoin Core software.
+This document provides guidelines for internationalization of the Bonkcoin Core software.
 
 How to translate?
 ------------------

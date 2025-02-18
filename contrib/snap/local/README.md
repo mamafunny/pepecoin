@@ -1,6 +1,6 @@
-# Pepecoin Snap Packaging
+# Bonkcoin Snap Packaging
 
-Commands for building and uploading a Pepecoin Core Snap to the Snap Store. Anyone on amd64 (x86_64), arm64 (aarch64), or i386 (i686) should be able to build it themselves with these instructions. This would pull the official Pepecoin binaries from the releases page, verify them, and install them on a user's machine.
+Commands for building and uploading a Bonkcoin Core Snap to the Snap Store. Anyone on amd64 (x86_64), arm64 (aarch64), or i386 (i686) should be able to build it themselves with these instructions. This would pull the official Bonkcoin binaries from the releases page, verify them, and install them on a user's machine.
 
 ## Building Locally
 ```
@@ -17,21 +17,21 @@ snap install \*.snap --devmode
 ### To Upload to the Snap Store
 ```
 snapcraft login
-snapcraft register pepecoin-core
+snapcraft register bonkcoin-core
 snapcraft upload \*.snap
-sudo snap install pepecoin-core
+sudo snap install bonkcoin-core
 ```
 
 ### Usage
 ```
-pepecoin-unofficial.cli # for pepecoin-cli
-pepecoin-unofficial.d # for pepecoind
-pepecoin-unofficial.qt # for pepecoin-qt
-pepecoin-unofficial.test # for test_pepecoin
-pepecoin-unofficial.tx # for pepecoin-tx
+bonkcoin-unofficial.cli # for bonkcoin-cli
+bonkcoin-unofficial.d # for bonkcoind
+bonkcoin-unofficial.qt # for bonkcoin-qt
+bonkcoin-unofficial.test # for test_bonkcoin
+bonkcoin-unofficial.tx # for bonkcoin-tx
 ```
 
 ### Uninstalling
 ```
-sudo snap remove pepecoin-unofficial
+sudo snap remove bonkcoin-unofficial
 ```

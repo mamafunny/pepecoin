@@ -3,17 +3,17 @@
 #
 # The relevant paths are:
 #
-#/opt/pepecoin/pepecoind
-#/etc/opt/pepecoin/
-#/var/opt/pepecoin/
+#/opt/bonkcoin/bonkcoind
+#/etc/opt/bonkcoin/
+#/var/opt/bonkcoin/
 
 [Unit]
-Description=Pepecoin's distributed currency daemon
+Description=Bonkcoin's distributed currency daemon
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/opt/pepecoin/bin/pepecoind -conf=/etc/opt/pepecoin/pepecoin.conf -datadir=/var/opt/pepecoin
+ExecStart=/opt/bonkcoin/bin/bonkcoind -conf=/etc/opt/bonkcoin/bonkcoin.conf -datadir=/var/opt/bonkcoin
 
 KillSignal=SIGINT
 Restart=always
@@ -23,8 +23,8 @@ TimeoutStartSec=5
 StartLimitIntervalSec=120
 StartLimitBurst=5
 
-User=pepecoin
-Group=pepecoin
+User=bonkcoin
+Group=bonkcoin
 
 ### Restrict resource consumption
 MemoryAccounting=yes
@@ -41,8 +41,8 @@ TemporaryFileSystem=/:ro
 BindReadOnlyPaths=/etc/ /lib/ /lib64/
 
 # Add daemon paths
-BindReadOnlyPaths=/opt/pepecoin/ /etc/opt/pepecoin/
-BindPaths=/var/opt/pepecoin/
+BindReadOnlyPaths=/opt/bonkcoin/ /etc/opt/bonkcoin/
+BindPaths=/var/opt/bonkcoin/
 
 ### Restrict access to system.
 

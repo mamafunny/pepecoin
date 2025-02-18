@@ -4,10 +4,10 @@ about: Suggest an idea for this project
 title: '[feat] '
 ---
 
-<!-- Please make sure you are posting an technical issue related to Pepecoin Core. --> 
+<!-- Please make sure you are posting an technical issue related to Bonkcoin Core. --> 
 
-<!-- For general questions about Pepecoin or wallet recovery please use one of the various communities:
-* [Discord](https://pepecoin.org/discord) -->
+<!-- For general questions about Bonkcoin or wallet recovery please use one of the various communities:
+* [Discord](https://bonkcoin.org/discord) -->
 
 <!-- ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION. -->
 

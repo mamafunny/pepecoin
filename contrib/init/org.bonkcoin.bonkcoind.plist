@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>org.pepecoin.pepecoind</string>
+	<string>org.bonkcoin.bonkcoind</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/pepecoind</string>
+		<string>/usr/local/bin/bonkcoind</string>
 		<string>-daemon</string>
 	</array>
 	<key>RunAtLoad</key>
