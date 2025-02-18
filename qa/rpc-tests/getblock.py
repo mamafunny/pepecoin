@@ -161,7 +161,7 @@ class GetBlockTest(BitcoinTestFramework):
 
         # Mainchain's genesis block shouldn't be found on regtest
         assert_raises_jsonrpc(-5, 'Block not found', self.nodes[0].getblock,
-                                blockhash='37981c0c48b8d48965376c8a42ece9a0838daadb93ff975cb091f57f8c2a5faa')
+                                blockhash='0x3ea754d80173ccb0f19377e9a98d41e7d597dd77ce827b121f655a421216592b')
 
         # Invalid number of args
         assert_raises_jsonrpc(-1, 'getblock "blockhash" ( verbosity )', self.nodes[0].getblock)

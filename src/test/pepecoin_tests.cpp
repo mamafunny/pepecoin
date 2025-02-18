@@ -4,30 +4,28 @@
 
 #include "arith_uint256.h"
 #include "chainparams.h"
-#include "pepecoin.h"
+#include "bonkcoin.h"
 #include "test/test_bitcoin.h"
 
 #include <boost/test/unit_test.hpp>
 
-BOOST_FIXTURE_TEST_SUITE(pepecoin_tests, TestingSetup)
+BOOST_FIXTURE_TEST_SUITE(bonkcoin_tests, TestingSetup)
 
 /**
  * the maximum block reward at a given height for a block without fees
  */
 uint64_t expectedMaxSubsidy(int height) {
-    if (height < 100000) {
-        return 1000000 * COIN;
-    } else if (height < 145000) {//PEPE TODO Magic number
+    if (height < 50000) {
         return 500000 * COIN;
-    } else if (height < 200000) {
+    } else if (height < 100000) {
         return 250000 * COIN;
-    } else if (height < 300000) {
+    } else if (height < 150000) {
         return 125000 * COIN;
-    } else if (height < 400000) {
+    } else if (height < 200000) {
         return  62500 * COIN;
-    } else if (height < 500000) {
+    } else if (height < 250000) {
         return  31250 * COIN;
-    } else if (height < 600000) {
+    } else if (height < 300000) {
         return  15625 * COIN;
     } else {
         return  10000 * COIN;
@@ -39,19 +37,17 @@ uint64_t expectedMaxSubsidy(int height) {
  * for a block without fees
  */
 uint64_t expectedMinSubsidy(int height) {
-    if (height < 100000) {
+    if (height < 50000) {
         return 0;
-    } else if (height < 145000) {//PEPE TODO Magic number
-        return 0;
-    } else if (height < 200000) {
+    } else if (height < 100000) {
         return 250000 * COIN;
-    } else if (height < 300000) {
+    } else if (height < 150000) {
         return 125000 * COIN;
-    } else if (height < 400000) {
+    } else if (height < 200000) {
         return  62500 * COIN;
-    } else if (height < 500000) {
+    } else if (height < 250000) {
         return  31250 * COIN;
-    } else if (height < 600000) {
+    } else if (height < 300000) {
         return  15625 * COIN;
     } else {
         return  10000 * COIN;
@@ -64,19 +60,19 @@ BOOST_AUTO_TEST_CASE(subsidy_test)
     const CChainParams& mainParams = Params(CBaseChainParams::MAIN);
     const uint256 prevHash = uint256S("0");
 
-    for (int nHeight = 0; nHeight < 600000; nHeight++) {
+    for (int nHeight = 0; nHeight < 300000; nHeight++) {
         const Consensus::Params& params = mainParams.GetConsensus(nHeight);
-        CAmount nSubsidy = GetPepecoinBlockSubsidy(nHeight, params, prevHash);
+        CAmount nSubsidy = GetBonkcoinBlockSubsidy(nHeight, params, prevHash);
         CAmount nExpectedSubsidy = (500000 >> (nHeight / 100000)) * COIN;
         BOOST_CHECK(MoneyRange(nSubsidy));
         BOOST_CHECK_EQUAL(nSubsidy, nExpectedSubsidy);
     }
 
     // Test reward at 600k+ is constant
-    CAmount nConstantSubsidy = GetPepecoinBlockSubsidy(600000, mainParams.GetConsensus(600000), prevHash);
+    CAmount nConstantSubsidy = GetBonkcoinBlockSubsidy(300000, mainParams.GetConsensus(300000), prevHash);
     BOOST_CHECK_EQUAL(nConstantSubsidy, 10000 * COIN);
 
-    nConstantSubsidy = GetPepecoinBlockSubsidy(700000, mainParams.GetConsensus(700000), prevHash);
+    nConstantSubsidy = GetBonkcoinBlockSubsidy(400000, mainParams.GetConsensus(400000), prevHash);
     BOOST_CHECK_EQUAL(nConstantSubsidy, 10000 * COIN);
 }
 
@@ -91,7 +87,7 @@ BOOST_AUTO_TEST_CASE(get_next_work_difficulty_limit)
     pindexLast.nHeight = 239;
     pindexLast.nTime = 1386475638; // Block #239
     pindexLast.nBits = 0x1e0ffff0;
-    BOOST_CHECK_EQUAL(CalculatePepecoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1e0fffff);
+    BOOST_CHECK_EQUAL(CalculateBonkcoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1e0fffff);
 }
 
 BOOST_AUTO_TEST_CASE(get_next_work_pre_digishield)
@@ -105,7 +101,7 @@ BOOST_AUTO_TEST_CASE(get_next_work_pre_digishield)
     pindexLast.nHeight = 9599;
     pindexLast.nTime = 1386954113;
     pindexLast.nBits = 0x1c1a1206;
-    BOOST_CHECK_EQUAL(CalculatePepecoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1c271b09);
+    BOOST_CHECK_EQUAL(CalculateBonkcoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1c271b09);
 }
 
 BOOST_AUTO_TEST_CASE(get_next_work_digishield)
@@ -117,16 +113,16 @@ BOOST_AUTO_TEST_CASE(get_next_work_digishield)
     int64_t nLastRetargetTime = 1395094427;
 
     // First hard-fork at 145,000, which applies to block 145,001 onwards
-    pindexLast.nHeight = 145000;//PEPE TODO Magic number
+    pindexLast.nHeight = 145000;//BONC TODO Magic number
     pindexLast.nTime = 1395094679;
     pindexLast.nBits = 0x1b499dfd;
-    BOOST_CHECK_EQUAL(CalculatePepecoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b671062);
+    BOOST_CHECK_EQUAL(CalculateBonkcoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b671062);
 }
 
 BOOST_AUTO_TEST_CASE(get_next_work_digishield_modulated_upper)
 {
     SelectParams(CBaseChainParams::MAIN);
-    const Consensus::Params& params = Params().GetConsensus(1000);//PEPE TODO Magic number
+    const Consensus::Params& params = Params().GetConsensus(1000);//BONC TODO Magic number
     
     CBlockIndex pindexLast;
     int64_t nLastRetargetTime = 1395100835;
@@ -135,13 +131,13 @@ BOOST_AUTO_TEST_CASE(get_next_work_digishield_modulated_upper)
     pindexLast.nHeight = 145107;
     pindexLast.nTime = 1395101360;
     pindexLast.nBits = 0x1b3439cd;
-    BOOST_CHECK_EQUAL(CalculatePepecoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b4e56b3);
+    BOOST_CHECK_EQUAL(CalculateBonkcoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b4e56b3);
 }
 
 BOOST_AUTO_TEST_CASE(get_next_work_digishield_modulated_lower)
 {
     SelectParams(CBaseChainParams::MAIN);
-    const Consensus::Params& params = Params().GetConsensus(1000);//PEPE TODO Magic number
+    const Consensus::Params& params = Params().GetConsensus(1000);//BONC TODO Magic number
     
     CBlockIndex pindexLast;
     int64_t nLastRetargetTime = 1395380517;
@@ -150,13 +146,13 @@ BOOST_AUTO_TEST_CASE(get_next_work_digishield_modulated_lower)
     pindexLast.nHeight = 149423;
     pindexLast.nTime = 1395380447;
     pindexLast.nBits = 0x1b446f21;
-    BOOST_CHECK_EQUAL(CalculatePepecoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b335358);
+    BOOST_CHECK_EQUAL(CalculateBonkcoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b335358);
 }
 
 BOOST_AUTO_TEST_CASE(get_next_work_digishield_rounding)
 {
     SelectParams(CBaseChainParams::MAIN);
-    const Consensus::Params& params = Params().GetConsensus(1000);//PEPE TODO Magic number
+    const Consensus::Params& params = Params().GetConsensus(1000);//BONC TODO Magic number
     
     CBlockIndex pindexLast;
     int64_t nLastRetargetTime = 1395094679;
@@ -166,7 +162,7 @@ BOOST_AUTO_TEST_CASE(get_next_work_digishield_rounding)
     pindexLast.nHeight = 145001;
     pindexLast.nTime = 1395094727;
     pindexLast.nBits = 0x1b671062;
-    BOOST_CHECK_EQUAL(CalculatePepecoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b6558a4);
+    BOOST_CHECK_EQUAL(CalculateBonkcoinNextWorkRequired(&pindexLast, nLastRetargetTime, params), 0x1b6558a4);
 }
 
 BOOST_AUTO_TEST_CASE(hardfork_parameters)
@@ -183,7 +179,7 @@ BOOST_AUTO_TEST_CASE(hardfork_parameters)
     BOOST_CHECK_EQUAL(initialParamsEnd.fAllowLegacyBlocks, true);
     BOOST_CHECK_EQUAL(initialParamsEnd.fDigishieldDifficultyCalculation, true);
 
-    const Consensus::Params& digishieldParams = Params().GetConsensus(1000);//PEPE TODO Magic number
+    const Consensus::Params& digishieldParams = Params().GetConsensus(1000);//BONC TODO Magic number
     BOOST_CHECK_EQUAL(digishieldParams.nPowTargetTimespan, 60);
     BOOST_CHECK_EQUAL(digishieldParams.fAllowLegacyBlocks, true);
     BOOST_CHECK_EQUAL(digishieldParams.fDigishieldDifficultyCalculation, true);
@@ -193,13 +189,13 @@ BOOST_AUTO_TEST_CASE(hardfork_parameters)
     BOOST_CHECK_EQUAL(digishieldParamsEnd.fAllowLegacyBlocks, true);
     BOOST_CHECK_EQUAL(digishieldParamsEnd.fDigishieldDifficultyCalculation, true);
 
-    const Consensus::Params& auxpowParams = Params().GetConsensus(42000);//PEPE TODO Magic number
-    BOOST_CHECK_EQUAL(auxpowParams.nHeightEffective, 42000);//PEPE TODO Magic number
+    const Consensus::Params& auxpowParams = Params().GetConsensus(42000);//BONC TODO Magic number
+    BOOST_CHECK_EQUAL(auxpowParams.nHeightEffective, 42000);//BONC TODO Magic number
     BOOST_CHECK_EQUAL(auxpowParams.nPowTargetTimespan, 60);
     BOOST_CHECK_EQUAL(auxpowParams.fAllowLegacyBlocks, false);
     BOOST_CHECK_EQUAL(auxpowParams.fDigishieldDifficultyCalculation, true);
 
-    const Consensus::Params& auxpowHighParams = Params().GetConsensus(700000); // Arbitrary point after last hard-fork
+    const Consensus::Params& auxpowHighParams = Params().GetConsensus(400000); // Arbitrary point after last hard-fork
     BOOST_CHECK_EQUAL(auxpowHighParams.nPowTargetTimespan, 60);
     BOOST_CHECK_EQUAL(auxpowHighParams.fAllowLegacyBlocks, false);
     BOOST_CHECK_EQUAL(auxpowHighParams.fDigishieldDifficultyCalculation, true);

@@ -49,7 +49,7 @@
 #endif
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("pepecoin:");
+const QString BITCOIN_IPC_PREFIX("bonkcoin:");
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
@@ -81,7 +81,7 @@ namespace // Anon namespace
 //
 static QString ipcServerName()
 {
-    QString name("PepecoinQt");
+    QString name("BonkcoinQt");
 
     // Append a simple hash of the datadir
     // Note that GetDataDir(true) returns a different path
@@ -245,11 +245,11 @@ void PaymentServer::ipcParseCommandLine(int argc, char* argv[])
             PaymentRequestPlus request;
             if (readPaymentRequestFromFile(arg, request))
             {
-                if (request.getDetails().genesis() == "37981c0c48b8d48965376c8a42ece9a0838daadb93ff975cb091f57f8c2a5faa")
+                if (request.getDetails().genesis() == "0x3ea754d80173ccb0f19377e9a98d41e7d597dd77ce827b121f655a421216592b")
                 {
                     SelectParams(CBaseChainParams::MAIN);
                 }
-                else if (request.getDetails().genesis() == "f9f4ea4ae7f6ea4c55040ede2019ba0a53e262f46ec9bce3dcda2cb11f96fc52")
+                else if (request.getDetails().genesis() == "0x0bb0f2e668c363e321c208d756d3a4bde76e82e45e76d00538c3e9b05389f5ed")
                 {
                     SelectParams(CBaseChainParams::TESTNET);
                 }
@@ -322,7 +322,7 @@ void PaymentServer::initializeServer(QObject* parent, QString ipcServerName, boo
         if (!uriServer->listen(ipcServerName)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(0, tr("Payment request error"),
-                tr("Cannot start pepecoin: click-to-pay handler"));
+                tr("Cannot start bonkcoin: click-to-pay handler"));
         }
         else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
@@ -499,7 +499,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid Pepecoin address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid Bonkcoin address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
