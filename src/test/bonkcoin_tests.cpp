@@ -14,20 +14,20 @@ BOOST_FIXTURE_TEST_SUITE(bonkcoin_tests, TestingSetup)
 /**
  * the maximum block reward at a given height for a block without fees
  */
-uint64_t expectedMaxSubsidy(int height) {
-    if (height < 50000) {
+ uint64_t expectedMaxSubsidy(int height) {
+    if (height < 100000) {
         return 1000000 * COIN;
-    } else if (height < 100000) {
-        return 250000 * COIN;
-    } else if (height < 145000) {//BONC TODO Magic number
-        return 125000 * COIN;
-    } else if (height < 150000) {
-        return 125000 * COIN;
+    } else if (height < 145000) {//PEPE TODO Magic number
+        return 500000 * COIN;
     } else if (height < 200000) {
-        return  62500 * COIN;
-    } else if (height < 250000) {
-        return  31250 * COIN;
+        return 250000 * COIN;
     } else if (height < 300000) {
+        return 125000 * COIN;
+    } else if (height < 400000) {
+        return  62500 * COIN;
+    } else if (height < 500000) {
+        return  31250 * COIN;
+    } else if (height < 600000) {
         return  15625 * COIN;
     } else {
         return  10000 * COIN;
@@ -39,19 +39,19 @@ uint64_t expectedMaxSubsidy(int height) {
  * for a block without fees
  */
 uint64_t expectedMinSubsidy(int height) {
-    if (height < 50000) {
+    if (height < 100000) {
         return 0;
-    } else if (height < 100000) {
-        return 0 * COIN;
-    } else if (height < 145000) {//BONC TODO Magic number
+    } else if (height < 145000) {//PEPE TODO Magic number
         return 0;
-    } else if (height < 150000) {
-        return 125000 * COIN;
     } else if (height < 200000) {
-        return  62500 * COIN;
-    } else if (height < 250000) {
-        return  31250 * COIN;
+        return 250000 * COIN;
     } else if (height < 300000) {
+        return 125000 * COIN;
+    } else if (height < 400000) {
+        return  62500 * COIN;
+    } else if (height < 500000) {
+        return  31250 * COIN;
+    } else if (height < 600000) {
         return  15625 * COIN;
     } else {
         return  10000 * COIN;
