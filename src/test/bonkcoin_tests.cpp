@@ -12,50 +12,28 @@
 BOOST_FIXTURE_TEST_SUITE(bonkcoin_tests, TestingSetup)
 
 /**
- * the maximum block reward at a given height for a block without fees
+ * The maximum block reward at a given height for a block without fees.
  */
  uint64_t expectedMaxSubsidy(int height) {
-    if (height < 100000) {
-        return 1000000 * COIN;
-    } else if (height < 145000) {//BONC TODO Magic number
-        return 500000 * COIN;
-    } else if (height < 200000) {
-        return 250000 * COIN;
-    } else if (height < 300000) {
-        return 125000 * COIN;
-    } else if (height < 400000) {
-        return  62500 * COIN;
-    } else if (height < 500000) {
-        return  31250 * COIN;
-    } else if (height < 600000) {
-        return  15625 * COIN;
-    } else {
-        return  10000 * COIN;
-    }
+    if (height < 50000) return 500000 * COIN;
+    if (height < 100000) return 250000 * COIN;
+    if (height < 150000) return 125000 * COIN;
+    if (height < 200000) return 62500 * COIN;
+    if (height < 250000) return 31250 * COIN;
+    if (height < 300000) return 15625 * COIN;
+    return 10000 * COIN;
 }
 
 /**
- * the minimum possible value for the maximum block reward at a given height
- * for a block without fees
+ * The minimum possible value for the maximum block reward at a given height.
  */
 uint64_t expectedMinSubsidy(int height) {
-    if (height < 100000) {
-        return 0;
-    } else if (height < 145000) {//BONC TODO Magic number
-        return 0;
-    } else if (height < 200000) {
-        return 250000 * COIN;
-    } else if (height < 300000) {
-        return 125000 * COIN;
-    } else if (height < 400000) {
-        return  62500 * COIN;
-    } else if (height < 500000) {
-        return  31250 * COIN;
-    } else if (height < 600000) {
-        return  15625 * COIN;
-    } else {
-        return  10000 * COIN;
-    }
+    if (height < 100000) return 0;
+    if (height < 150000) return 125000 * COIN;
+    if (height < 200000) return 62500 * COIN;
+    if (height < 250000) return 31250 * COIN;
+    if (height < 300000) return 15625 * COIN;
+    return 10000 * COIN;
 }
 
 // Check the simplified rewards after block 145,000
@@ -64,19 +42,19 @@ BOOST_AUTO_TEST_CASE(subsidy_test)
     const CChainParams& mainParams = Params(CBaseChainParams::MAIN);
     const uint256 prevHash = uint256S("0");
 
-    for (int nHeight = 0; nHeight < 600000; nHeight++) {
+    for (int nHeight = 0; nHeight < 300000; nHeight++) {
         const Consensus::Params& params = mainParams.GetConsensus(nHeight);
         CAmount nSubsidy = GetBonkcoinBlockSubsidy(nHeight, params, prevHash);
-        CAmount nExpectedSubsidy = (250000 >> (nHeight / 100000)) * COIN;
+        CAmount nExpectedSubsidy = expectedMaxSubsidy(nHeight);
         BOOST_CHECK(MoneyRange(nSubsidy));
         BOOST_CHECK_EQUAL(nSubsidy, nExpectedSubsidy);
     }
 
     // Test reward at 600k+ is constant
-    CAmount nConstantSubsidy = GetBonkcoinBlockSubsidy(600000, mainParams.GetConsensus(600000), prevHash);
+    CAmount nConstantSubsidy = GetBonkcoinBlockSubsidy(300000, mainParams.GetConsensus(300000), prevHash);
     BOOST_CHECK_EQUAL(nConstantSubsidy, 10000 * COIN);
 
-    nConstantSubsidy = GetBonkcoinBlockSubsidy(700000, mainParams.GetConsensus(700000), prevHash);
+    nConstantSubsidy = GetBonkcoinBlockSubsidy(400000, mainParams.GetConsensus(400000), prevHash);
     BOOST_CHECK_EQUAL(nConstantSubsidy, 10000 * COIN);
 }
 
