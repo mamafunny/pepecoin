@@ -47,8 +47,8 @@ def is_valid(v):
     if result is None:
         return False
     for template in templates:
-        prefix = bytes(template[0])
-        suffix = bytes(template[2])
+        prefix = bytes(template[0])  # Ensure prefix is bytes
+        suffix = bytes(template[2])  # Ensure suffix is bytes
         if result.startswith(prefix) and result.endswith(suffix):
             if (len(result) - len(prefix) - len(suffix)) == template[1]:
                 return True
@@ -58,9 +58,9 @@ def gen_valid_vectors():
     '''Generate valid test vectors'''
     while True:
         for template in templates:
-            prefix = bytes(template[0])  # Corrected to bytes
+            prefix = bytes(template[0])  # Convert to bytes
             payload = os.urandom(template[1]) 
-            suffix = bytes(template[2])  # Corrected to bytes
+            suffix = bytes(template[2])  # Convert to bytes
             rv = b58encode_chk(prefix + payload + suffix)
             assert is_valid(rv)
             metadata = dict([(x, y) for (x, y) in zip(metadata_keys, template[3]) if y is not None])
@@ -73,7 +73,7 @@ def gen_invalid_vector(template, corrupt_prefix, randomize_payload_size, corrupt
     if corrupt_prefix:
         prefix = os.urandom(1)
     else:
-        prefix = bytes(template[0])
+        prefix = bytes(template[0])  # Ensure prefix is bytes
     
     if randomize_payload_size:
         payload = os.urandom(max(int(random.expovariate(0.5)), 50))
@@ -83,7 +83,7 @@ def gen_invalid_vector(template, corrupt_prefix, randomize_payload_size, corrupt
     if corrupt_suffix:
         suffix = os.urandom(len(template[2]))
     else:
-        suffix = bytes(template[2])
+        suffix = bytes(template[2])  # Ensure suffix is bytes
 
     return b58encode_chk(prefix + payload + suffix)
 
