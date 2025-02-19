@@ -6,8 +6,8 @@
 
     | Function | mainnet | testnet | regtest |
     | :------- | ------: | ------: | ------: |
-    | P2P      |   33874 |   44874 |   18444 |
-    | RPC      |   33873 |   44873 |   18332 |
+    | P2P      |   14327 |   44874 |   18444 |
+    | RPC      |   15612 |   44873 |   18332 |
 * Set AuxPow ChainID to `63`.
 * Remove occurances of Dogecoin and replace with Bonkcoin where appropriate.
 * All Bonkcoin addresses now start with the letter `P`. All other address prefixes Dogecoin uses will be adopted by Bonkcoin for familiarity purposes.
@@ -45,13 +45,13 @@
 * Create new `about.png` with a Bonkcoin logo
 * Add new design for `paper_wallet.png`
 * Remove Dogecoin explorer urls
-* Update tx urls in gui to point to the Bonkcoin blockchain explorer PepeExplorer.com
+* Update tx urls in gui to point to the Bonkcoin blockchain explorer explorer.bonkscoin.io
 
 ####Documentation
 
 * Generate Bonkcoin man pages
 * Add `--with-gui` to `build-windows.md` instructions
-* Change website url to bonkcoin.org
+* Change website url to bonkscoin.io
 * Change ticker symbol from `PPC` to `BONC` in `readme.md`, man pages, and `amount.cpp`
 * Update `assets-attribution.md`
 * Update `gen-manpages.sh` to target the bash shell
