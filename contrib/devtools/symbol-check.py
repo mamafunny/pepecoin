@@ -40,7 +40,7 @@ import lief #type:ignore
 MAX_VERSIONS = {
 'GCC':       (4,4,0),
 'GLIBC': {
-    lief.ELF.ARCH.X86_64: (2,11),
+    lief.ELF.ARCH.x86_64: (2,11),
     lief.ELF.ARCH.i386:   (2,11),
     lief.ELF.ARCH.ARM:    (2,11),
     lief.ELF.ARCH.AARCH64:(2,17),
