@@ -231,11 +231,11 @@ jobs:
         run: ${{ matrix.postinstall }}
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: SDK cache
         if: ${{ matrix.sdk }}
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: sdk
         with:
@@ -254,7 +254,7 @@ jobs:
           echo "${{ matrix.sdk-shasum }}  depends/sdk-sources/${{ env.sdk-filename }}" | sha256sum -c
           tar -C depends/SDKs -xf depends/sdk-sources/${{ env.sdk-filename }}
       - name: Dependency cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: depends
         with:
@@ -265,7 +265,7 @@ jobs:
         run: |
           make $MAKEJOBS -C depends HOST=${{ matrix.host }} ${{ matrix.dep-opts }}
       - name: CCache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: ccache
         with:
@@ -296,7 +296,7 @@ jobs:
         run: make -C src check-symbols
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bonkcoin-${{ github.sha }}-${{ matrix.name }}
           path: |
