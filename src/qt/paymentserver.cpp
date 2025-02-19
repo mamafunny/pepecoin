@@ -245,11 +245,11 @@ void PaymentServer::ipcParseCommandLine(int argc, char* argv[])
             PaymentRequestPlus request;
             if (readPaymentRequestFromFile(arg, request))
             {
-                if (request.getDetails().genesis() == "0x3ea754d80173ccb0f19377e9a98d41e7d597dd77ce827b121f655a421216592b")
+                if (request.getDetails().genesis() == "0bb0f2e668c363e321c208d756d3a4bde76e82e45e76d00538c3e9b05389f5ed")
                 {
                     SelectParams(CBaseChainParams::MAIN);
                 }
-                else if (request.getDetails().genesis() == "0x0bb0f2e668c363e321c208d756d3a4bde76e82e45e76d00538c3e9b05389f5ed")
+                else if (request.getDetails().genesis() == "b463889d9777c58014bb152ba72cd7369d58c105ca58fe7234764fd9dafc154a")
                 {
                     SelectParams(CBaseChainParams::TESTNET);
                 }
